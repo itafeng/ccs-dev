@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="ContosoAdsCloudService_Clone" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="ContosoAdsWeb">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="StorageConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="ContosoAdsWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="StorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="ConstosoAdsDbConnectionString" value="Server=tcp:uxhh8hxfof.database.windows.net,1433;Database=PilotDB;User ID=dbuser@uxhh8hxfof;Password=Test-Execution;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
